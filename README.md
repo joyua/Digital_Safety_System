@@ -76,8 +76,7 @@ All RTL modules are independently synthesizable and simulation-ready.
 /testbench
   └─ Digital_Safe_With_Counter_tb.v
 README.md
-
-
+```
 
 ---
 
