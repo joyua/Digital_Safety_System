@@ -61,18 +61,22 @@ All RTL modules are independently synthesizable and simulation-ready.
 ---
 
 ## 📁 File Structure
+
+```text
 /rtl
-├─ Digital_Safe_With_Counter.v
-├─ up_counter_4.v
-├─ clk_gen_25_2M.v
-├─ debouncer.v
-├─ synchronizer.v
-├─ pattern_gen.v
-├─ dec2ssd.v
-├─ uart_tx.v
-├─ watchdog_fsm.v
+  ├─ Digital_Safe_With_Counter.v
+  ├─ up_counter_4.v
+  ├─ clk_gen_25_2M.v
+  ├─ debouncer.v
+  ├─ synchronizer.v
+  ├─ pattern_gen.v
+  ├─ dec2ssd.v
+  ├─ uart_tx.v
+  ├─ watchdog_fsm.v
 /testbench
-└─ Digital_Safe_With_Counter_tb.v
+  └─ Digital_Safe_With_Counter_tb.v
+README.md
+
 
 
 ---
