@@ -100,7 +100,7 @@ Planned upgrades for this system include:
 
 ## 🧑‍💻 Author
 
-Designed by **Changhyun Jo** (Inha University, EE)  
+Designed by **Changhyeon**  
 Contact: kil0886@naver.com  
 GitHub: [github.com/joyua](https://github.com/joyua)
 
