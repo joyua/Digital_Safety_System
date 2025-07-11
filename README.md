@@ -27,8 +27,7 @@ The design targets FPGA/ASIC platforms, focusing on robust user authentication, 
 | **clk_gen_25_2M**         | 125 MHz to 25.2 MHz and 100 MHz clock division                                  |
 | **pattern_gen**           | Real-time RGB/VGA pattern (success/green, fail/red, idle/white)                 |
 | **dec2ssd**               | BCD digit to 7-segment display code conversion                                  |
-| **uart_tx**               | UART transmission of system log and error/status information                    |
-| **watchdog_fsm**          | Periodic self-test and automatic reset/fail-safe logic                          |
+| **freq_div_100**          | Clock divider that generates a lower-frequency clock by dividing the input clock by a fixed ratio.   |
 
 All RTL modules are independently synthesizable and simulation-ready.
 
@@ -43,8 +42,7 @@ All RTL modules are independently synthesizable and simulation-ready.
 | Auth Check        | OK                | Compare input with stored password, trigger status logic     |
 | Display Switch    | place             | Select left/right digit pair for 7-segment display           |
 | User Feedback     | sled, led6_r/g, o_r/g/b_data | LEDs, RGB, and VGA output for current status        |
-| UART Logging      | uart_tx           | All events, errors, and state transitions sent to PC terminal|
-| Self-Diagnosis    | watchdog_fsm      | Periodic system health check and fail-safe entry on error    |
+
 
 ---
 
@@ -64,17 +62,16 @@ All RTL modules are independently synthesizable and simulation-ready.
 
 ```text
 /rtl
-  ├─ Digital_Safe_With_Counter.v
+  ├─ Digital_Safety_System.v
   ├─ up_counter_4.v
   ├─ clk_gen_25_2M.v
   ├─ debouncer.v
   ├─ synchronizer.v
   ├─ pattern_gen.v
+  ├─ freq_div_100
   ├─ dec2ssd.v
-  ├─ uart_tx.v
-  ├─ watchdog_fsm.v
 /testbench
-  └─ Digital_Safe_With_Counter_tb.v
+  └─ tb_digital.v
 README.md
 ```
 
